@@ -19,3 +19,6 @@ checkpoints/*
 
 # Logs
 results/logs/*.log
+
+# Docs
+CLAUDE.md
