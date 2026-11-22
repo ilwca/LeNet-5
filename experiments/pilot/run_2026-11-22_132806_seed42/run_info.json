@@ -1,0 +1,29 @@
+{
+  "run_id": "run_2026-11-22_132806_seed42",
+  "experiment_name": "lenet5_cifar10_pilot",
+  "seed": 42,
+  "repetition": 1,
+  "config_hash": "f89a6df8e379",
+  "created_at": "2026-11-22T13:28:06",
+  "status": "trained",
+  "split_fingerprint": "c80680a66e10b580",
+  "normalization": {
+    "mean": [
+      0.4918399328533497,
+      0.4825411911934913,
+      0.44681958341843686
+    ],
+    "std": [
+      0.24705073072319003,
+      0.24354212224302527,
+      0.26169221308322815
+    ]
+  },
+  "device": "cpu",
+  "trained_at": "2026-11-22T13:34:16",
+  "best_epoch": 3,
+  "best_val_loss": 1.2662487775802613,
+  "epochs_completed": 3,
+  "stopped_early": false,
+  "training_time_s": 21.317715862000114
+}

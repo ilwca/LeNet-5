@@ -1,0 +1,21 @@
+# Ambiente
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
+# Dados (baixados automaticamente pelo torchvision)
+data/*
+!data/.gitkeep
+
+# Checkpoints de retomada (estado completo; grandes e reconstruíveis).
+# checkpoint_best.pth (~250 KB) é mantido junto aos resultados de cada execução.
+experiments/**/checkpoint_last.pth
+experiments/**/*.tmp
+checkpoints/*
+!checkpoints/.gitkeep
+
+# Logs
+results/logs/*.log
