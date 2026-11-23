@@ -1,0 +1,66 @@
+experiment:
+  name: lenet5_cifar10_baseline
+  seed: 789
+  repetitions: 5
+  seeds:
+  - 42
+  - 123
+  - 456
+  - 789
+  - 1024
+  output_dir: experiments/baseline
+model:
+  architecture: lenet5
+  input_channels: 3
+  num_classes: 10
+  precision: float32
+dataset:
+  name: cifar10
+  data_dir: data
+  download: true
+  train_size: 45000
+  validation_size: 5000
+  test_size: 10000
+  split_seed: 42
+  stratified: true
+  normalize: true
+  augmentation: false
+  num_workers: 0
+training:
+  epochs: 50
+  batch_size: 128
+  optimizer: adam
+  learning_rate: 0.001
+  weight_decay: 0.0005
+  adam_betas:
+  - 0.9
+  - 0.999
+  adam_eps: 1.0e-08
+  loss: cross_entropy
+  scheduler: reduce_on_plateau
+  scheduler_params:
+    mode: min
+    factor: 0.5
+    patience: 5
+    threshold: 0.0001
+    threshold_mode: rel
+    cooldown: 0
+    min_lr: 1.0e-06
+  early_stopping: false
+  checkpoint_metric: val_loss
+  deterministic: true
+evaluation:
+  batch_size: 128
+  latency_batch_sizes:
+  - 1
+  - 128
+  warmup_iterations: 50
+  benchmark_iterations: 200
+environment:
+  device: auto
+  precision: float32
+run:
+  run_id: run_2026-11-22_234729_seed789
+  repetition: 4
+  seed: 789
+  config_hash: 0f6a6e4f2bb4

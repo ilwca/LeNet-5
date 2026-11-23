@@ -1,0 +1,29 @@
+{
+  "run_id": "run_2026-11-22_234729_seed789",
+  "experiment_name": "lenet5_cifar10_baseline",
+  "seed": 789,
+  "repetition": 4,
+  "config_hash": "0f6a6e4f2bb4",
+  "created_at": "2026-11-22T23:47:29",
+  "status": "trained",
+  "split_fingerprint": "c80680a66e10b580",
+  "normalization": {
+    "mean": [
+      0.4918399328533497,
+      0.4825411911934913,
+      0.44681958341843686
+    ],
+    "std": [
+      0.24705073072319003,
+      0.24354212224302527,
+      0.26169221308322815
+    ]
+  },
+  "device": "cuda",
+  "trained_at": "2026-11-22T23:48:57",
+  "best_epoch": 14,
+  "best_val_loss": 1.0524480969429015,
+  "epochs_completed": 50,
+  "stopped_early": false,
+  "training_time_s": 87.4949186110025
+}

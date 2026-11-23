@@ -122,7 +122,7 @@ class LeNet5(nn.Module):
         return shapes
 
     def verify_shapes(self) -> "OrderedDict[str, tuple[int, ...]]":
-        """Verifica as dimensões intermediárias; levanta AssertionError se divergirem."""
+        """Verifica as dimensoes intermediarias; levanta AssertionError se divergirem."""
         observed = self.trace_shapes()
         expected = self.expected_shapes()
         mismatches = {
@@ -131,12 +131,12 @@ class LeNet5(nn.Module):
             if observed.get(name) != shape
         }
         if mismatches or list(observed) != list(expected):
-            raise AssertionError(f"Dimensões divergentes (observado, esperado): {mismatches}")
+            raise AssertionError(f"Dimensoes divergentes (observado, esperado): {mismatches}")
         return observed
 
 
 def build_model(config: dict) -> LeNet5:
-    """Constrói o modelo a partir da seção `model` da configuração, em FP32."""
+    """Constrói o modelo a partir da secao `model` da configuracao, em FP32."""
     model_cfg = config["model"]
     architecture = model_cfg.get("architecture", "lenet5")
     if architecture != "lenet5":
